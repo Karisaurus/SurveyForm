@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="StyleSheetForm.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div>
+      <h1 id="title">APP SURVEY FORM</h1>
+      <p id="description">Give us some feedback about our app!</p>
+    </div>
+
+    <form id="survey-form">
+      <div class="box-max">
+       <label id="name-label" for="name">Name:</label>
+       <input type="text" id="name" maxlength="20" placeholder=" Your Name Here..." required>
+      </div>
+
+      <div class="box-max">
+       <label id="email-label" for="email">E-mail:</label>
+       <input id="email"  type="email" placeholder=" Your E-mail Here..." required >
+      </div>
+
+      <div id="box-years">
+       <label id="number-label" for="number">Age:</label>
+       <input type="number" id="number" min="13" max="120" inputmode="numeric" pattern="[0-9]" placeholder=" Years">
+      </div>
+
+      <!-- Dropdown list below -->
+
+      <div class="box-max">
+       <label for="dropdown" id="familiar-label">How familiar are you with this type of service?</label>
+       <select id="dropdown">
+        <option>Completely Unfamiliar</option>
+        <option>Moderately Familiar</option>
+        <option>Very Familiar</option>
+       </select>
+      </div>
+
+      <!-- Checkboxes below -->
+
+      <div id="checkboxes">
+       <div class="checklabel"><label id="checkbox-title" for="Checkboxes">Which of our features do you like the most?</label></div>
+       <div class="checkdiv"><label for="cb1"><input type="checkbox" value="responsiveness" id="cb1" >App Responsiveness</label></div>
+       <div class="checkdiv"><label for="cb2"><input type="checkbox" value="layout" id="cb2" >App Layout</label></div>
+       <div class="checkdiv"><label for="cb3"><input type="checkbox" value="design" id="cb3" >App Design</label></div>
+       <div class="checkdiv"><label for="cb4"><input type="checkbox" value="functionality" id="cb4" >App Functionality</label></div>
+      </div>
+
+      <div class="box-max">
+        <label id="textlabel" for="textarea">Tell us more about your experience below:</label>
+        <textarea id="textarea" placeholder=" Your Feedback Here..." rows="5" maxlength="1000"></textarea>
+      </div>
+      
+      <div class="container">
+        <Label>I accept the Terms & Conditions:</Label>
+        <div class="checkdiv"><label for="terms-yes"><input type="radio" id="terms-yes" name="termsname" value="yes">Yes.</label></div>
+        <div class="checkdiv"><label for="terms-no"><input type="radio" id="terms-no" name="termsname" value="no">No.</label></div>
+      </div>
+
+      <div class="container">
+        <Label>Would you like to receive updates via email/sms?</Label>
+        <div class="checkdiv"><label for="optional-yes"><input type="radio" id="optional-yes" name="optionalsname" value="yes">Yes.</label></div>
+        <div class="checkdiv"><label for="optional-no"><input type="radio" id="optional-no" name="optionalsname" value="no">No.</label></div>
+      </div>
+
+      <div id="submit-button">
+        <input type="submit">
+      </div>
+
+    </form>
+
+
+  </body>
+</html>
